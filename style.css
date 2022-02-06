@@ -1,42 +1,133 @@
-body {
-    background-color: #22212C;
-    margin: 0;
-    width: 100vw;
-    height: 100vh;
-    display: grid;
-    grid-template-areas:
-        "aside main"
-        "footer footer";
-    margin: 0 2em 0 2em;
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap');
+
+:root {
+    --body-bg-color: #22212C;
+    --text-color: #837E9F;
+    --bg-cards: #302F3D;
+    --bg-techs: #CB92B1;
 }
 
-aside{
-    grid-area: aside;
-    width: 21.7499999em;
-    height: 18.25em;
-    background-color: red;
-    margin: 2.5em 0 0 2.5em;
-    align-content: center;
+* {
+    margin: 0;
+    padding: 0;
 }
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+body {
+    font-family: 'Merriweather Sans', sans-serif;
+    font-weight: 400;
+    color: var(--text-color);
+    background-color: var(--body-bg-color);
+    word-spacing: 0.25rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    padding: 0.6rem;
+    font-weight: 700;
+    text-justify: distribute;
+}
+
+h2 {    
+    font-size: 1.4rem;
+    padding: 0.6rem;
+}
+
+p {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+.container {
+    margin: 2.5rem 2.5rem 0 2.5rem;  
+    display: flex;
+    gap: 3.8rem;
+}
+
+aside {
+    flex-basis: 25.589%;
+    height: 18.25rem;
+    position: relative;
+}
+/* 348px */
 
 main {
-    grid-area: main;
-    width: 66.112vw;
-    margin: 2.5em 0 0 1.5em;
-    background-color: blue;
+    flex: 1;
+    width: 59.5rem;
+    height: 18.25rem;
 }
+/* 952px */
 
 footer {
-    grid-area: footer;
     text-align: center;
+    padding: 1rem;
 }
 
 .box {
-    background-color: #302F3D;
-    width: 100%;
-    height: 292px   ;
+    background-color: var(--bg-cards);
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+    padding: 2rem;
+    margin-bottom: 30px;
 }
 
-.side {
+.round {
+    border-radius: 1.3rem;
+}
 
+/* 348px */  /* 292px */
+.profile {
+    display: flex;
+    align-content: center;
+    text-align: center;
+}
+
+.profile figure {
+    flex:1;
+    align-content: center;
+    text-align: center;
+}
+
+.profile figure .figure-round-border {
+    margin: 0 auto;
+    border: 2px rgb(0, 255, 64) solid;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 120px;
+    height: 120px;
+    
+}
+
+.profile figure .figure-round-border img {
+    width: 100%;
+    height: auto;
+}
+
+.profile figure .figure-round-border img {
+    width: 100%;
+    height: auto;
+}
+
+/* 952px */  /* 86px */
+.profile1 {
+    width: 100%;
+    height: 228px;
+    background-color: red;
+}
+
+/* 461px */  /* 186px */
+.profile2 {
+    width: 100%;
+    height: 228px;
+    background-color: red;
+}
+
+/* 952px */  /* 201px */
+.profile3 {
+    width: auto;
+    height: 228px;
+    background-color: red;
 }
