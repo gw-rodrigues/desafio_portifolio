@@ -1,0 +1,42 @@
+body {
+    background-color: #22212C;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-areas:
+        "aside main"
+        "footer footer";
+    margin: 0 2em 0 2em;
+}
+
+aside{
+    grid-area: aside;
+    width: 21.7499999em;
+    height: 18.25em;
+    background-color: red;
+    margin: 2.5em 0 0 2.5em;
+    align-content: center;
+}
+
+main {
+    grid-area: main;
+    width: 66.112vw;
+    margin: 2.5em 0 0 1.5em;
+    background-color: blue;
+}
+
+footer {
+    grid-area: footer;
+    text-align: center;
+}
+
+.box {
+    background-color: #302F3D;
+    width: 100%;
+    height: 292px   ;
+}
+
+.side {
+
+}
