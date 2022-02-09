@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,44 +11,246 @@
     <!-- Social Network -->
     <meta propety="or:image" content="link-img">
     <meta propety="or:title" content="title facebook">
-    <meta propety="or:description" content="facebook descrition">  
+    <meta propety="or:description" content="facebook descrition">
     <meta propety="twitter:title" content="Twitter title">
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <div class="container">
+    <div class="container flex">
         <aside>
-            <section class="box round profile">
-                <figure>
-                    <div class="figure-round-border">
-                        <img src="assets/profile.jpeg">
-                    </div>
-                    <figcaption>
-                        <h1>João Inácio Neto</h1>
-                        <p>Full Stack Developer</p>
-                    </figcaption>
+            <section id="profile" class="rounded">
+                <figure class="flex">
+                    <img src="assets/profile.jpeg">
                 </figure>
+                <h1>João Inácio Neto</h1>
+                <p>Full Stack Developer</p>   
             </section>
-            <section class="box round">
+            <section id="infos" class="rounded flex">               
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/map-pin.svg">
+                        </figure>
+                        <p>Brasil</p>
+                    </a>
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/briefcase.svg">
+                        </figure>
+                        <p>Rocketseat</p>
+                    </a>
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/github.svg">
+                        </figure>
+                        <p>birobirobiro</p>
+                    </a>
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/linkedin.svg">
+                        </figure>
+                        <p>joao-inacio-neto</p>
+                    </a>
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/twitter.svg">
+                        </figure>
+                        <p>birobirobiro</p>
+                    </a>
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/globe.svg">
+                        </figure>
+                        <p>https://birobirobiro.dev</p>
+                    </a>
+                    <a class="flex" href="#">
+                        <figure class="icons">
+                            <img src="assets/mail.svg">
+                        </figure>
+                        <p>birobirobiro.dev@gmail.com</p>
+                    </a>
+                
             </section>
-            <section class="box round">
+            <section id="techs" class="rounded">
+                <h2>Tecnologias</h2>
+                <div class="techs-list flex-tree">
+                    <p class="rounded"><strong>javascript</strong></p>
+                    <p class="rounded"><strong>reactjs</strong></p>
+                    <p class="rounded"><strong>nodejs</strong></p>
+                    <p class="rounded"><strong>git</strong></p>
+                    <p class="rounded"><strong>github</strong></p>
+                    <p class="rounded"><strong>html</strong></p>
+                    <p class="rounded"><strong>css</strong></p>
+                    <p class="rounded"><strong>elixir</strong></p>
+                    <p class="rounded"><strong>react native</strong></p>
+                </div>
             </section>
-            <section class="box round">
+            <section id="experiences" class="rounded">
+                <h2>Experiências</h2>
+                <ul class="posts-list">
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - Atualmente</p>
+                            <p>Community Experience</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - Atualmente</p>
+                            <p>Community Experience</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - Atualmente</p>
+                            <p>Community Experience</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - Atualmente</p>
+                            <p>Community Experience</p>
+                        </a>
+                    </li>
+                </ul>
             </section>
-            <section class="box round">
+            <section id="education" class="rounded">
+                <h2>Educação</h2>
+                <ul class="posts-list">
+                    <li class="post">
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - 2019</p>
+                            <p>GoStack</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - 2020</p>
+                            <p>Ignite</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - 2021</p>
+                            <p>Ignite Pro</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <p><strong>Rocketseat</strong></p>
+                            <p>2019 - 2022</p>
+                            <p>Ignite Pro</p>
+                        </a>
+                    </li>
+                </ul>
             </section>
         </aside>
         <main>
-            <div class="box round">123</div>
-            <div class="box round">123</div>
-            <div class="box round">123</div>
-            <div class="box round">123</div>
-            <div class="box round">123</div>
+            <article id="projects">
+                <header class="flex rounded">
+                    <h2>My Projects</h2>
+                    <a href="#">Veja todos</a>
+                </header>
+
+                <section class="article-container flex-two">
+                    <a href="#" class="article-post rounded flex">                       
+                        <div class="title flex">
+                            <figure class="icons"><img src="assets/folder.svg"></figure>
+                            <h3>my-onix</h3>
+                        </div>
+
+                        <p class="description">Consulte os codigos de erro que aparecem no painel do veiculo Onix.</p>
+                        
+                        <aside class="statistics flex">
+                                <div id="github" class="flex">
+                                    <div id="stars" class="flex">
+                                        <figure class="icons"><img src="assets/star.svg"></figure>
+                                        <p class="stars">100</p>
+                                    </div>
+                                    <div id="forks" class="flex">
+                                        <figure class="icons"><img src="assets/git-branch.svg"></figure>
+                                        <p class="stars">100</p>
+                                    </div>
+                                </div>
+                                <div class="category flex">
+                                    <span id="circle"></span>
+                                    <p>JavaScript</p>
+                                </div>
+                        </aside>
+                    </a>
+
+                    <a href="##" class="article-post rounded flex">                       
+                        <div class="title flex">
+                            <figure class="icons"><img src="assets/folder.svg"></figure>
+                            <h3>my-onix</h3>
+                        </div>
+
+                        <p class="description">Consulte os codigos de erro que aparecem no painel do veiculo Onix.</p>
+                        
+                        <aside class="statistics flex">
+                                <div id="github" class="flex">
+                                    <div id="stars" class="flex">
+                                        <figure class="icons"><img src="assets/star.svg"></figure>
+                                        <p class="stars">100</p>
+                                    </div>
+                                    <div id="forks" class="flex">
+                                        <figure class="icons"><img src="assets/git-branch.svg"></figure>
+                                        <p class="stars">100</p>
+                                    </div>
+                                </div>
+                                <div class="category flex">
+                                    <span id="circle"></span>
+                                    <p>JavaScript</p>
+                                </div>
+                        </aside>
+                    </a>
+                </section>
+
+            </article>
+
+
+            <article id="latest-posts">
+                <header class="flex rounded">
+                    <h2>Recent Posts</h2>
+                </header>
+
+                <section class="article-container flex">
+                    <a href="###" class="article-post rounded flex"> 
+                        <figure id="profile-photo" class="flex">
+                            <img src="assets/profile.jpeg">
+                        </figure>
+                        <div class="post-content">                      
+                            <div class="title flex">
+                                <h3>Erro adb devices no Genymotion e Android Studio (React Native)</h3>                             
+                            </div>
+                            <p class="post-date">2 anos atrás</p>
+                            <p class="description">Erro adb devices no Genymotion e Android Studio (React Native)</p>
+                                                       
+                            <aside class="tags flex">
+                                <p>#react-native</p>
+                                <p>#genimotion</p>
+                                <p>#genimotion</p>
+                                <p>#genimotion</p>
+                            </aside>
+                        </div>
+                    </a>
+
+                </section>  
+
+            </article>
         </main>
     </div>
     <footer>
-        feito por gleydson rodrigues
+        <p>Feito com 💜 por birobirobiro</p>
     </footer>
 </body>
+
 </html>
