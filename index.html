@@ -23,53 +23,53 @@
         <aside>
             <section id="profile" class="rounded">
                 <figure class="flex">
-                    <img src="assets/profile.jpeg">
+                    <img id="avatar_url" src="assets/profile.jpeg">
                 </figure>
-                <h1>João Inácio Neto</h1>
-                <p>Full Stack Developer</p>   
+                <h1 id="name">João Inácio Neto</h1>
+                <p id="bio">Full Stack Developer</p>   
             </section>
             <section id="infos" class="rounded flex">               
-                    <a class="flex" href="#">
+                    <a id="location" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/map-pin.svg">
                         </figure>
-                        <p>Brasil</p>
+                        <p id="location_text">Brasil</p>
                     </a>
-                    <a class="flex" href="#">
+                    <a  id="company" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/briefcase.svg">
                         </figure>
-                        <p>Rocketseat</p>
+                        <p id="company_text">Rocketseat</p>
                     </a>
-                    <a class="flex" href="#">
+                    <a id="login" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/github.svg">
                         </figure>
-                        <p>birobirobiro</p>
+                        <p id="login_text">birobirobiro</p>
                     </a>
-                    <a class="flex" href="#">
+                    <a id="blog" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/linkedin.svg">
                         </figure>
-                        <p>joao-inacio-neto</p>
+                        <p id="blog_text">joao-inacio-neto</p>
                     </a>
-                    <a class="flex" href="#">
+                    <a id="twitter_username" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/twitter.svg">
                         </figure>
-                        <p>birobirobiro</p>
+                        <p id="twitter_username_text">birobirobiro</p>
                     </a>
-                    <a class="flex" href="#">
+                    <a id="html_url" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/globe.svg">
                         </figure>
-                        <p>https://birobirobiro.dev</p>
+                        <p id="html_url_text">https://birobirobiro.dev</p>
                     </a>
-                    <a class="flex" href="#">
+                    <a id="email" class="flex" href="#">
                         <figure class="icons">
                             <img src="assets/mail.svg">
                         </figure>
-                        <p>birobirobiro.dev@gmail.com</p>
+                        <p id="email_text">birobirobiro.dev@gmail.com</p>
                     </a>
                 
             </section>
@@ -226,7 +226,7 @@
                 <section class="article-container flex">
                     <a href="###" class="article-post rounded flex"> 
                         <figure id="profile-photo" class="flex">
-                            <img src="assets/profile.jpeg">
+                            <img id="avatar_url_1" src="assets/profile.jpeg">
                         </figure>
                         <div class="post-content">                      
                             <div class="title flex">
@@ -252,6 +252,38 @@
     <footer>
         <p>Feito com 💜 por birobirobiro</p>
     </footer>
+    <script>
+        (function() {
+            /*
+                    GETTING SOME INFO FROM GITHUB TO PROFILE SECTION
+            */
+            const xhttp = new XMLHttpRequest();
+            xhttp.onload = function() {
+                const obj = JSON.parse(this.responseText);
+                console.log(obj);
+                document.getElementById("avatar_url").src = obj.avatar_url;
+                document.getElementById("avatar_url_1").src = obj.avatar_url;
+                document.getElementById("name").innerText = obj.name;
+                document.getElementById("bio").innerText = obj.bio;
+                document.getElementById("location").href = 'https://www.google.com/maps/search/' + obj.location;
+                document.getElementById("location_text").innerText = obj.location;
+                document.getElementById("company").href = obj.html_url;
+                document.getElementById("company_text").innerText = obj.login;
+                document.getElementById("login").href = obj.html_url;
+                document.getElementById("login_text").innerText = obj.login;
+                document.getElementById("blog").href = obj.blog;
+                document.getElementById("blog_text").innerText = obj.blog.replaceAll("https://www.linkedin.com/in/",'').replaceAll("/",'');
+                document.getElementById("twitter_username").href = 'https://twitter.com/'+obj.twitter_username;
+                document.getElementById("twitter_username_text").innerText = obj.twitter_username;
+                document.getElementById("html_url").href = obj.html_url;
+                document.getElementById("html_url_text").innerText = obj.html_url;
+                document.getElementById("email").href = 'mailto:'+obj.login + '@gmail.com';
+                document.getElementById("email_text").innerText = obj.login + '@gmail.com';
+            }
+            xhttp.open("GET", "https://api.github.com/users/gw-rodrigues");
+            xhttp.send();
+        })();
+    </script>
 </body>
 
 </html>
