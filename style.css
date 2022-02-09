@@ -331,7 +331,24 @@ footer p {
 */
 
 @media (max-width: 950px) {
+    .container {
+        margin: 2.5rem 0.5rem 0 0.5rem
+    }
     .container aside {
         flex: 1 348px;
+    }
+}
+@media (max-width: 480px) {
+    .container {
+        margin: 2.5rem 0 0 0;
+    }
+    .container aside {
+        flex: 1 0;
+    }
+    .container main {
+        flex: 1 0;
+    }
+    article section .article-post .statistics #github {
+        gap: 10px;
     }
 }
