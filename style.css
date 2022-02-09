@@ -1,4 +1,12 @@
+/* 
+        FONT IMPORT 
+*/
+
 @import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400;500;700&display=swap');
+
+/* 
+        VAR CREATION
+*/
 
 :root {
     --body-bg-color: #22212C;
@@ -7,14 +15,13 @@
     --bg-techs: #CB92B1;
 }
 
+/* 
+        GENERAL 
+*/
+
 * {
     margin: 0;
     padding: 0;
-}
-
-img {
-    width: 100%;
-    height: auto;
 }
 
 body {
@@ -22,19 +29,28 @@ body {
     font-weight: 400;
     color: var(--text-color);
     background-color: var(--body-bg-color);
-    word-spacing: 0.25rem;
+    
+}
+
+img {
+    width: 100%;
+    height: auto;
 }
 
 h1 {
-    font-size: 1.5rem;
-    padding: 0.6rem;
+    font-size: 1.45rem;
+    padding: 0.6rem 0 0.45rem 0;
     font-weight: 700;
     text-justify: distribute;
 }
 
 h2 {    
-    font-size: 1.4rem;
-    padding: 0.6rem;
+    font-size: 1.26rem;
+    padding: 0.5rem 0;
+}
+
+h3 {    
+    font-size: 1rem;
 }
 
 p {
@@ -42,92 +58,268 @@ p {
     font-weight: 300;
 }
 
-.container {
-    margin: 2.5rem 2.5rem 0 2.5rem;  
-    display: flex;
-    gap: 3.8rem;
+a {
+    text-decoration: none;
+    color: var(--text-color);
 }
 
-aside {
-    flex-basis: 25.589%;
-    height: 18.25rem;
-    position: relative;
-}
-/* 348px */
+/*
+        SHARED CLASSES
+*/
 
-main {
-    flex: 1;
-    width: 59.5rem;
-    height: 18.25rem;
-}
-/* 952px */
-
-footer {
-    text-align: center;
-    padding: 1rem;
-}
-
-.box {
+.rounded {
     background-color: var(--bg-cards);
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
-    padding: 2rem;
     margin-bottom: 30px;
-}
-
-.round {
     border-radius: 1.3rem;
 }
 
-/* 348px */  /* 292px */
-.profile {
+.flex {
     display: flex;
-    align-content: center;
-    text-align: center;
+    flex-wrap: wrap;
 }
-
-.profile figure {
-    flex:1;
-    align-content: center;
-    text-align: center;
+.flex > * {
+    flex: 1;
 }
-
-.profile figure .figure-round-border {
-    margin: 0 auto;
-    border: 2px rgb(0, 255, 64) solid;
-    border-radius: 50%;
-    overflow: hidden;
-    width: 120px;
-    height: 120px;
+.flex-two {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+.flex-two > * {
+    flex: 1 1 40%;
+}
+.flex-tree {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.flex-tree > * {
+    flex: 1 1 25%;
     
 }
 
-.profile figure .figure-round-border img {
-    width: 100%;
+.icons img{
+    filter: invert(56%) sepia(8%) saturate(983%) hue-rotate(209deg) brightness(89%) contrast(91%);
+}
+
+#circle {
+    background: #E7DE79;
+    border: 2px solid #837E9F;
+    border-radius: 50%;
+    width:11px;
+    height: 11px;
+    margin: auto 0;
+}
+
+/*
+    STRUCTURE
+*/
+
+.container {
+    margin: 2.5rem 2.5rem 0 2.5rem;  
+    gap: 3.75rem;
+}
+
+.container aside {
+    width: 348px;
+    max-width: 348px;
+    min-width: 348px;
+}/* 348px */
+
+.container main {
+    min-width: 348px; /* 476px 952px */
+    max-width: 952px;
+}
+
+aside section {
+    padding: 1.2rem;
+}
+
+/* 
+            ASIDE AREA 
+*/
+
+/*      PROFILE     */
+#profile {
+    text-align: center;
+    word-spacing: 0.25rem;
+}
+#profile figure {
+    margin: 0.8rem auto 1.2rem auto;
+    border: 2px #00FF00 solid;
+    border-radius: 50%;
+    overflow: hidden;
+    width: 125px;
+    height: 125px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#profile p {
+    margin-bottom: 1.9rem;
+}
+
+/*      INFOS       */
+#infos  {
+    padding-top: 1.4rem;
+    flex-direction: column;
+}
+#infos a {  
+    gap: 1.2rem;
+    padding: 0.5rem 1.3rem;
+}
+#infos figure {
+    width: 24px;
+    max-width: 24px;
     height: auto;
 }
+#infos p {
+    line-height: 24px;
+}
 
-.profile figure .figure-round-border img {
+/*      TECHS       */
+#techs .techs-list {
+    padding: 0.7rem;    
+}
+#techs .techs-list p {
+    background-color: var(--bg-techs);
+    color: var(--bg-cards);
+    width: 86px;
+    line-height: 24px;
+    font-size: 0.63rem;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/*      EXPERIENCE + EDUCATION      */
+#experiences .posts-list, #education .posts-list {
+    padding: 0 2.6rem;
+}
+#experiences .posts-list li, #education .posts-list li {
+    padding: 0.6rem 0;
+    font-size: 0.7rem;
+}
+#experiences .posts-list p, #education .posts-list p {
+    font-size: 0.75rem;
+}
+#experiences .posts-list p:first-of-type, #education .posts-list p:first-of-type {
+    font-size: 0.85rem;
+}
+
+/* 
+MAIN AREA 
+*/
+
+/*      COMMON + MY PROJECTS        */
+article {
+    margin-bottom: 30px;
+}
+article header {
+    padding: 1.4rem 2rem 1.35rem 1.9rem;
+    align-items: center;
+}
+article header h2 {
+   flex: 2 !important;
+}
+article header a {
+    text-align: right;
+    font-size: 0.9rem;
+}
+article .icons {
+    max-width: 20px;
+    max-height: 20px;
+}
+article .article-container  {
+    gap: 2rem;
+}
+article section .article-post {
+    padding: 1.9rem;
+    flex-direction: column;
+    margin: 0;
+}
+article section .article-post .title {
+    gap: 1rem;
+}
+article section .article-post .description {
+    font-size: 0.9rem;
+    margin: 1.5rem 0;
+}
+article section .article-post aside {
     width: 100%;
-    height: auto;
+    max-width: 476px;
+    min-width: 0;
+}
+article section .article-post .statistics {
+    gap: 1rem;
+}
+article section .article-post .statistics p {
+    line-height: 24px;
+    font-size: 0.88rem;
+}
+article section .article-post .statistics #github {
+    flex: 1;
+    gap: 1rem;
+}
+article section .article-post .statistics #github > * {
+    gap: 0.5rem;
+}
+article section .article-post .statistics .category {
+    flex: 2;
+    justify-content: right;
+    gap: 0.5rem;
+}
+article section .article-post .statistics .category > * {
+    flex: initial;
 }
 
-/* 952px */  /* 86px */
-.profile1 {
-    width: 100%;
-    height: 228px;
-    background-color: red;
+/*      Lastest Posts       */
+#latest-posts .article-post {
+    flex: 1 1 100%;
+    gap: 1.3rem;
+    flex-direction: row;
+    padding: 1.8rem 2rem 2.8rem 2rem;
+    font-size: 0.9rem;
+}
+#latest-posts .article-post h3 {
+    font-size: 1.12rem;
+    margin-bottom: 0.5rem;
+}
+#latest-posts .article-post .post-date {
+    font-size: 0.85rem;
+}
+#latest-posts .article-post .description {
+    font-size: 1rem;
+    margin: 1.8rem 0 0.7rem 0;
+}
+#latest-posts .article-post #profile-photo {
+    border-radius: 50%;
+    overflow: hidden;
+    width: 125px;
+    height: 125px;
+    max-width: 125px;
+    max-height: 125px;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+#latest-posts section .article-post aside {
+    max-width: 100%;
+    gap: 1.75rem;
+}
+#latest-posts section .article-post aside > p {
+    flex: inherit;
+    font-size: 0.85rem;
 }
 
-/* 461px */  /* 186px */
-.profile2 {
-    width: 100%;
-    height: 228px;
-    background-color: red;
+
+/* 
+        FOOTER 
+*/
+
+footer p {
+    font-size: 0.9rem;
+    text-align: center;
+    padding-bottom: 1rem;
 }
 
-/* 952px */  /* 201px */
-.profile3 {
-    width: auto;
-    height: 228px;
-    background-color: red;
-}
